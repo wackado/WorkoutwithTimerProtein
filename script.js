@@ -1,6 +1,6 @@
 // Strong Women Workout Builder JavaScript
 let selectedWeek = 1,
-  selectedDay = "monday",
+  selectedDay = "monday",ðŸ’¡
   selectedDuration = "standard",
   selectedLocation = "home",
   trainingWeek = 1,
@@ -3416,7 +3416,7 @@ function updateApp() {
                             </div>
                         </div>
                         <p style="margin: 8px 0 0 0; font-size: 12px; color: #92400e; font-style: italic;">
-                            ðŸ’¡ Target 80-100% during work intervals. Use a heart rate monitor or fitness tracker for best results.
+                            Target 80-100% during work intervals. Use a heart rate monitor or fitness tracker for best results.
                         </p>
                     </div>
                 `
