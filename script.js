@@ -1443,18 +1443,8 @@ function getPhaseTitle(phase) {
 
   // For SIT phase, show duration-based time
   if (phase === "sit") {
-    // Show work interval based on training level
-    let workInterval = "20s";
-    if (selectedWeek === 1) {
-      workInterval = "20s (Beginner)";
-    } else if (selectedWeek === 2) {
-      workInterval = "30s (Intermediate)";
-    } else if (selectedWeek === 3) {
-      workInterval = "40s (Advanced)";
-    } else if (selectedWeek === 4) {
-      workInterval = "20s (Deload)";
-    }
-    return `${titles[phase]} - ${workInterval}`;
+    // Show 20-30s for all levels
+    return `${titles[phase]} - 20-30s`;
   }
 
   const timeDisplay = targetTime === null ? "" : `(${targetTime}min)`;
