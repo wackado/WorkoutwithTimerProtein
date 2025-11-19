@@ -3989,6 +3989,7 @@ function initAudioContext() {
     if (audioContext.state === "suspended") {
       audioContext.resume();
     }
+    globalAudioContext = audioContext;
   } catch (e) {
     console.log("Audio context init:", e);
   }
@@ -3996,6 +3997,20 @@ function initAudioContext() {
 
 document.addEventListener("click", initAudioContext, { once: true });
 document.addEventListener("touchstart", initAudioContext, { once: true });
+
+// Re-initialize on orientation change
+window.addEventListener("orientationchange", () => {
+  console.log("Orientation changed - resuming audio context");
+  if (globalAudioContext && globalAudioContext.state === "suspended") {
+    globalAudioContext.resume();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (globalAudioContext && globalAudioContext.state === "suspended") {
+    globalAudioContext.resume();
+  }
+});
 
 // Initialize timer when page loads
 document.addEventListener("DOMContentLoaded", initializeTimerWidget);
