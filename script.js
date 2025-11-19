@@ -1661,13 +1661,13 @@ const exerciseMaxRounds = {
     "Explosive Push-Ups": 8,
   },
   sit: {
-    "Modified Jump Squats": 8,
-    "Light Thrusters": 8,
-    "Fast Squats": 8,
-    "Burpee Intervals": 8,
-    "Mountain Climbers": 8,
-    "High Knees": 8,
-    "Sprint Intervals": 8,
+    "Modified Jump Squats": 6,
+    "Light Thrusters": 6,
+    "Fast Squats": 6,
+    "Burpee Intervals": 6,
+    "Mountain Climbers": 6,
+    "High Knees": 6,
+    "Sprint Intervals": 6,
     "Complex Circuit": 6,
   },
   activation: {
@@ -1919,22 +1919,22 @@ function showRemovalPrompt(phase, increasedExercise, exercisesToRemove) {
 function playBeep() {
   try {
     // Try Tone.js first if available
-    if (typeof Tone !== "undefined" && toneInitialized) {
+    if (typeof Tone !== 'undefined' && toneInitialized) {
       const synth = new Tone.Synth({
-        oscillator: { type: "sine" },
-        envelope: { attack: 0.005, decay: 0.3, sustain: 0, release: 0.1 },
+        oscillator: { type: 'sine' },
+        envelope: { attack: 0.005, decay: 0.3, sustain: 0, release: 0.1 }
       }).toDestination();
-      synth.triggerAttackRelease("800Hz", "0.5");
+      synth.triggerAttackRelease('800Hz', '0.5');
       console.log("Beep played with Tone.js");
       return;
     }
-
+    
     const ctx = getAudioContext();
-
+    
     if (ctx.state === "suspended") {
       ctx.resume();
     }
-
+    
     const now = ctx.currentTime;
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
@@ -3904,7 +3904,7 @@ function playTimerBeep() {
 
     // Use global context that was initialized on first user interaction
     const ctx = globalAudioContext || getAudioContext();
-
+    
     if (ctx.state === "suspended") {
       ctx.resume();
     }
@@ -3925,7 +3925,7 @@ let toneInitialized = false;
 function initTone() {
   if (toneInitialized) return;
   try {
-    if (typeof Tone !== "undefined") {
+    if (typeof Tone !== 'undefined') {
       Tone.start();
       toneInitialized = true;
       console.log("Tone.js initialized");
@@ -3937,11 +3937,10 @@ function initTone() {
 
 function getAudioContext() {
   if (!globalAudioContext) {
-    globalAudioContext = new (window.AudioContext ||
-      window.webkitAudioContext)();
+    globalAudioContext = new (window.AudioContext || window.webkitAudioContext)();
   }
   if (globalAudioContext.state === "suspended") {
-    globalAudioContext.resume().catch((e) => console.log("Resume failed:", e));
+    globalAudioContext.resume().catch(e => console.log("Resume failed:", e));
   }
   return globalAudioContext;
 }
@@ -3949,11 +3948,11 @@ function getAudioContext() {
 function playWebAudioBeep(audioContext) {
   try {
     const ctx = audioContext || getAudioContext();
-
+    
     if (ctx.state === "suspended") {
       ctx.resume();
     }
-
+    
     // Play 3 beeps
     for (let i = 0; i < 3; i++) {
       setTimeout(() => {
