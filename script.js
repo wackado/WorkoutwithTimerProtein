@@ -708,7 +708,7 @@ const exerciseOptions = {
   ],
   sit: [
     {
-      name: "Modified Jump Squats",
+      name: "Modified Jump Squats (20s)",
       reps: "20-30s",
       weight: "bodyweight",
       time: "1 round",
@@ -717,7 +717,7 @@ const exerciseOptions = {
         "[RECOMMENDED] Stand with feet shoulder-width apart. Squat down then jump up 6-12 inches. Land softly and immediately squat again. Work at HIGH INTENSITY (80-100% max HR). This interval preserves form quality - critical for postmenopausal women who experience faster neuromuscular fatigue. Form degradation after 45 seconds increases injury risk. Allow 2-3 minutes recovery until heart rate returns to normal.",
     },
     {
-      name: "Light Thrusters",
+      name: "Light Thrusters (20s)",
       reps: "20-30s",
       weight: "5-8 lbs",
       time: "1 round",
@@ -726,7 +726,7 @@ const exerciseOptions = {
         "Hold light dumbbells at shoulders. Squat down, then explosively stand while pressing weights overhead. Lower weights back to shoulders and immediately squat again. Work continuously at MAXIMUM EFFORT (80-100% max HR). The work interval optimizes metabolic stimulus while maintaining movement quality and reducing joint stress from excessive fatigue. Allow 2-3 minutes recovery until heart rate returns to normal.",
     },
     {
-      name: "Fast Bodyweight Squats",
+      name: "Fast Bodyweight Squats (20s)",
       reps: "20-30s",
       weight: "bodyweight",
       time: "1 round",
@@ -735,7 +735,7 @@ const exerciseOptions = {
         "Bodyweight squats performed as fast as possible while maintaining proper form. Keep chest up, knees tracking over toes. Work at near-maximal speed. Count reps - aim for maximum within this interval. This duration allows higher volume while still maintaining form quality. Allow 2-3 minutes recovery until heart rate returns to normal.",
     },
     {
-      name: "Burpee Intervals",
+      name: "Burpee Intervals (20s)",
       reps: "20-30s",
       weight: "bodyweight",
       time: "1 round",
@@ -744,7 +744,7 @@ const exerciseOptions = {
         "[RECOMMENDED] Squat down, place hands on floor, jump feet back to plank, do a push-up, jump feet back to squat, then jump up with arms overhead. Repeat at MAXIMUM INTENSITY. Keep core tight, elbows close to body on push-up. This interval provides maximal cardiovascular and metabolic stimulus while protecting form quality essential for postmenopausal women. Allow 3-4 minutes recovery until heart rate returns to normal.",
     },
     {
-      name: "Mountain Climbers",
+      name: "Mountain Climbers (20s)",
       reps: "20-30s",
       weight: "bodyweight",
       time: "1 round",
@@ -753,7 +753,7 @@ const exerciseOptions = {
         "Start in plank position. Rapidly alternate bringing knees toward chest as if running in place horizontally. Keep hands planted, core tight. Move as fast as possible. This interval is optimal for maintaining rapid cadence without form breakdown. Allow 3-4 minutes recovery until heart rate returns to normal.",
     },
     {
-      name: "High Knees",
+      name: "High Knees (20s)",
       reps: "20-30s",
       weight: "bodyweight",
       time: "1 round",
@@ -762,7 +762,7 @@ const exerciseOptions = {
         "[RECOMMENDED] Run in place bringing knees up to waist height or higher. Pump arms rapidly and explosively. This should feel like sprinting in place - maximum effort at 80-100% max HR. The cardiovascular demand and lower body power output combine to preserve fast-twitch fibers and improve reactive capacity. Allow 2-3 minutes recovery until heart rate returns to normal.",
     },
     {
-      name: "Sprint Intervals",
+      name: "Sprint Intervals (20s)",
       reps: "20-30s",
       weight: "bodyweight",
       time: "1 round",
@@ -771,7 +771,7 @@ const exerciseOptions = {
         "[RECOMMENDED - PEAK POWER] If outdoors: sprint at maximum speed. If indoors: high knees, butt kicks, or fast feet in place. Give 100% effort as if running from danger. This interval provides maximum anaerobic stimulus without excessive fatigue that compromises movement quality and increases injury risk in postmenopausal athletes. Allow 4 minutes recovery until heart rate returns to normal.",
     },
     {
-      name: "Complex Circuit",
+      name: "Complex Circuit (20s)",
       reps: "20-30s",
       weight: "various",
       time: "1 round",
@@ -1531,9 +1531,9 @@ const exerciseBaseTimes = {
   },
   sit: {
     // SIT times in MINUTES - varies by training level (selectedWeek)
-    // Week 1 (Beginner): 40 seconds = 0.67 min
+    // Week 1 (Beginner): 20 seconds = 0.33 min
     // Week 2 (Intermediate): 30 seconds = 0.5 min
-    // Week 3 (Advanced): 20 seconds = 0.33 min
+    // Week 3 (Advanced): 40 seconds = 0.67 min
     "Modified Jump Squats": 0.5,
     "Light Thrusters": 0.5,
     "Fast Squats": 0.5,
