@@ -3562,7 +3562,7 @@ function updateApp() {
                                                     : selectedWeek === 2
                                                     ? "30s"
                                                     : selectedWeek === 3
-                                                    ? "30s"
+                                                    ? "40s"
                                                     : "20s"
                                                 } work`
                                               : phase === "activation"
