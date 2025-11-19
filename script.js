@@ -1,6 +1,6 @@
 // Strong Women Workout Builder JavaScript
 let selectedWeek = 1,
-  selectedDay = "monday",ðŸ’¡
+  selectedDay = "monday"
   selectedDuration = "standard",
   selectedLocation = "home",
   trainingWeek = 1,
