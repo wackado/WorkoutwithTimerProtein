@@ -396,15 +396,6 @@ const exerciseOptions = {
         "[RESEARCH-BACKED] Step off low platform (8-12 inches), **land on BOTH FEET with full-foot contact.** Immediate ground contact is critical—stick landing briefly (0.5-1 second). Immediately jump maximum height. Minimal ground contact time develops stretch-shortening cycle (elastic recoil) critical for power preservation. The landing phase teaches bones to respond quickly to impact. Trains rate of force development—ability to produce force quickly—which declines significantly after menopause. Requires 30-45 seconds rest between reps for nervous system recovery.",
     },
     {
-      name: "Calf Jumps (Ankle Reactivity & Full-Foot Loading)",
-      reps: "15-20 reps",
-      weight: "bodyweight",
-      time: "2 rounds",
-      rest: "60s between rounds, 5s between jumps",
-      description:
-        "[RESEARCH-BACKED] Small rapid hops using only ankle/calf. **Land on FULL FOOT—heel and forefoot both making contact.** Stay on ground for brief moment (0.5 second) before next jump. Maintain constant rhythm. Rapid ground contact trains lower leg reactivity and prevents ankle sprains. The repetitive full-foot impacts strengthen ankle and foot bones. Single-joint movement isolates calf power critical for balance and proprioception in older women. Rest 5 seconds between jumps—shorter rest allows higher volume while maintaining bone stimulus. This exercise trains the rapid loading-unloading cycle bones respond to.",
-    },
-    {
       name: "Transverse Rotation Jumps (Anti-Rotation Loading)",
       reps: "5/direction",
       weight: "bodyweight",
@@ -412,15 +403,6 @@ const exerciseOptions = {
       rest: "90s between rounds, 20s between direction changes",
       description:
         "[RESEARCH-BACKED] Stand with feet hip-width apart. Rotate torso maximally left, **jump while rotating torso right, landing with feet in rotated position on full foot.** Full-foot landing is essential for frontal plane hip loading. Alternate sides. This transverse plane (rotational) movement prevents rotational falls—a common cause of fractures in postmenopausal women. Full-foot landings in different planes stress skeleton in varied ways—critical for ongoing bone adaptation. Rest 20 seconds between direction changes. Trains core anti-rotation strength while building bone in multiple planes.",
-    },
-    {
-      name: "Jump Rope (Cardiovascular, NOT Primary Bone Training)",
-      reps: "40-50 reps",
-      weight: "jump rope",
-      time: "2 rounds",
-      rest: "90s between rounds",
-      description:
-        "Jump with both feet, rotating rope with wrist action. **IMPORTANT:** Jump rope minimizes ground contact time (landing only on balls of feet), which reduces bone stimulus compared to full-foot plyometric jumps. While excellent for cardiovascular fitness and coordination, it's less effective for building bone density. Use as supplementary cardio work or active recovery, NOT as your primary jump training. For bone health, prioritize exercises with FULL-FOOT landing (squat jumps, broad jumps, lateral bounds). This provides consistent 2-3x bodyweight impact while maintaining cardiovascular benefits.",
     },
   ],
   strength: [
@@ -1479,9 +1461,6 @@ const exerciseBaseTimes = {
     "Depth Jumps": 0.5,
     "Single Leg Hops": 0.5,
     "Split Jump Lunges": 0.5,
-    "Calf Hops": 0.5,
-    "Jump Rope": 0.5,
-    "Jumping Jacks": 0.5,
     "Forward Hops": 0.5,
   },
   strength: {
@@ -1615,9 +1594,6 @@ const exerciseMaxRounds = {
     "Depth Jumps": 8,
     "Single Leg Hops": 8,
     "Split Jump Lunges": 8,
-    "Calf Hops": 8,
-    "Jump Rope": 8,
-    "Jumping Jacks": 8,
     "Forward Hops": 8,
   },
   strength: {
