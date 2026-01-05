@@ -305,7 +305,7 @@ const equipmentDatabase = {
 const phaseExplanations = {
   activation:
     "Activation prepares your nervous system, increases blood flow to muscles, lubricates joints, and raises core temperature. This 'wake-up' process reduces injury risk and improves performance - especially critical for peri/postmenopausal women with reduced joint lubrication and slower neuromuscular response.",
-  jump: "Jump training provides high-impact bone loading stimulus (4-5x bodyweight) necessary to maintain and build bone density—critical for postmenopausal women losing 1-2% bone annually. Research shows 2-3 jump sessions/week with 40-100 total jumps per session and 10-30 second rest between individual jumps produces measurable 1-2% bone density gains over 6-12 months. **Key principle: Land on your entire foot (full-footed contact), not just toes—the bone responds to the impact force when your entire foot contacts the ground.** The rest periods between jumps are critical—bone stimulus depends on the loading-rest cycle, not continuous activity. Plyometrics preserve power, improve balance, and reduce fall risk by training rapid force production and reactive strength.",
+  jump: "Jump training provides high-impact bone loading stimulus (4-5x bodyweight) necessary to maintain and build bone density—critical for postmenopausal women losing 1-2% bone annually. Research shows 2-3 jump sessions/week with 40-100 total jumps per session and 10 second rest between individual jumps produces measurable 1-2% bone density gains over 6-12 months. **Key principle: Land on your entire foot (full-footed contact), not just toes—the bone responds to the impact force when your entire foot contacts the ground.** The rest periods between jumps are critical—bone stimulus depends on the loading-rest cycle, not continuous activity. Plyometrics preserve power, improve balance, and reduce fall risk by training rapid force production and reactive strength. **Scheduling flexibility:** Jump training can be done immediately before strength training (after your warm-up) or as a separate 10-15 minute session earlier in the day. If your strength workout focuses heavily on legs, consider doing jumps separately to avoid pre-fatiguing.",
   power:
     "Power training preserves fast-twitch muscle fibers that decline rapidly during menopause. These explosive movements improve your ability to react quickly (fall prevention), maintain bone density, and perform daily activities with confidence and strength.",
   sit: "SIT (Sprint Interval Training) sessions should be SHORT and INTENSE. Mix different exercises to keep it interesting while maintaining maximum effort. Target 80-100% of your maximum heart rate during work intervals!",
@@ -337,18 +337,18 @@ const exerciseOptions = {
       reps: "5-6 reps",
       weight: "bodyweight",
       time: "2 rounds",
-      rest: "90s between rounds, 10-15s between individual jumps",
+      rest: "90s between rounds, 10s between individual jumps",
       description:
-        "[RESEARCH-BACKED] Stand with feet shoulder-width apart. Lower into deep squat (90° knee bend), explode upward with maximum velocity. **LAND ON ENTIRE FOOT (full-footed contact)**, not just toes. Absorb force through bent knees, keeping chest up. Stick landing for 2 seconds emphasizing deceleration. This full-foot landing is CRITICAL—the bone responds to the impact force when your entire foot contacts the ground. Rest 10-15 seconds between each jump to allow the bone to respond to the loading stimulus. Provides 4-5x bodyweight impact force essential for bone density gains.",
+        "[RESEARCH-BACKED] Stand with feet shoulder-width apart. Lower into deep squat (90° knee bend), explode upward with maximum velocity. **LAND ON ENTIRE FOOT (full-footed contact)**, not just toes. Absorb force through bent knees, keeping chest up. Stick landing for 2 seconds emphasizing deceleration. This full-foot landing is CRITICAL—the bone responds to the impact force when your entire foot contacts the ground. Rest 10 seconds between each jump to allow the bone to respond to the loading stimulus. Provides 4-5x bodyweight impact force essential for bone density gains.",
     },
     {
       name: "Stiff-Leg Reactive Hops (Ankle Reactivity)",
       reps: "8-10 reps",
       weight: "bodyweight",
       time: "2 rounds",
-      rest: "60s between rounds, 5-10s between hops",
+      rest: "60s between rounds, 10s between hops",
       description:
-        "[RESEARCH-BACKED] Minimal knee bend, rapid ground contact using only ankle/calf. **Land on FULL FOOT—both heel and forefoot making contact.** Stay planted for brief moment (0.5 second) before next hop. This targets fast-twitch muscle fibers declining during menopause and improves ground reaction force. The key is the impact contact—don't minimize ground time like jump rope. This teaches your bones and muscles to respond to quick loading. Rest 5-10 seconds between hops for bone stimulus. Critical for reactive strength and preventing falls.",
+        "[RESEARCH-BACKED] Minimal knee bend, rapid ground contact using only ankle/calf. **Land on FULL FOOT—both heel and forefoot making contact.** Stay planted for brief moment (0.5 second) before next hop. This targets fast-twitch muscle fibers declining during menopause and improves ground reaction force. The key is the impact contact—don't minimize ground time like jump rope. This teaches your bones and muscles to respond to quick loading. Rest 10 seconds between hops for bone stimulus. Critical for reactive strength and preventing falls.",
     },
     {
       name: "Broad Jump with Deceleration & Full-Foot Landing",
@@ -364,18 +364,18 @@ const exerciseOptions = {
       reps: "6/leg",
       weight: "bodyweight",
       time: "3 rounds",
-      rest: "90s between rounds, 10-15s between hops",
+      rest: "90s between rounds, 10s between hops",
       description:
-        "[RESEARCH-BACKED] Balance on single leg, hop forward with rapid rhythm. **Land fully on entire foot, not just toes.** Maintain stable ankle position throughout. This unilateral movement restores ankle stability and prevents inversion sprains—critical for postmenopausal women losing proprioceptive feedback. The full-foot landing forces your ankle and hip stabilizers to absorb the impact, building local bone strength. Rest 10-15 seconds between hops. Corrects strength asymmetries common after menopause.",
+        "[RESEARCH-BACKED] Balance on single leg, hop forward with rapid rhythm. **Land fully on entire foot, not just toes.** Maintain stable ankle position throughout. This unilateral movement restores ankle stability and prevents inversion sprains—critical for postmenopausal women losing proprioceptive feedback. The full-foot landing forces your ankle and hip stabilizers to absorb the impact, building local bone strength. Rest 10 seconds between hops. Corrects strength asymmetries common after menopause.",
     },
     {
       name: "Lateral Bounds (Frontal Plane Loading)",
       reps: "4-5/side",
       weight: "bodyweight",
       time: "3 rounds",
-      rest: "90s between rounds, 15-20s between bounds",
+      rest: "90s between rounds, 10s between bounds",
       description:
-        "[RESEARCH-BACKED] Jump laterally from single leg to single leg with control. **Land on entire foot, absorbing force through hip abductors and glutes.** Stick each landing for 2 seconds before next bound. Most falls occur in the frontal plane (side-to-side)—this movement trains anti-gravity muscles and dynamic stability in this critical direction. Full-foot landings maximize hip bone loading. Rest 15-20 seconds between each bound to allow bone response. Develops hip abductor strength essential for balance and fall prevention.",
+        "[RESEARCH-BACKED] Jump laterally from single leg to single leg with control. **Land on entire foot, absorbing force through hip abductors and glutes.** Hold the landing position for 2 seconds to demonstrate control. Most falls occur in the frontal plane (side-to-side)—this movement trains anti-gravity muscles and dynamic stability in this critical direction. Full-foot landings maximize hip bone loading. Wait a full 10 seconds from landing before performing the next bound to allow bone response. Develops hip abductor strength essential for balance and fall prevention.",
     },
     {
       name: "Tuck Jumps (Maximum Power & Full-Foot Landing)",
