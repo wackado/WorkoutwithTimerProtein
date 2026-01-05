@@ -1755,16 +1755,16 @@ function calculateRounds(phase, selectedExercises) {
   const rounds = {};
 
   // For jump phase: target jump time based on training level
-  let targetJumpMinutes = 3; // default
+  let targetJumpMinutes = 18; // default
   if (phase === "jump") {
     if (selectedWeek === 1) {
-      targetJumpMinutes = 3; // Beginner: 3 minutes
+      targetJumpMinutes = 18; // Beginner: 18 minutes (30 jumps with 30s rest)
     } else if (selectedWeek === 2) {
-      targetJumpMinutes = 4; // Intermediate: 4 minutes
+      targetJumpMinutes = 18; // Intermediate: 18 minutes (30 jumps with 30s rest)
     } else if (selectedWeek === 3) {
-      targetJumpMinutes = 5; // Advanced: 5 minutes
+      targetJumpMinutes = 18; // Advanced: 18 minutes (30 jumps with 30s rest)
     } else if (selectedWeek === 4) {
-      targetJumpMinutes = 3; // Deload: beginner level (3 minutes)
+      targetJumpMinutes = 18; // Deload: 18 minutes (30 jumps with 30s rest)
     }
   }
 
@@ -3150,13 +3150,13 @@ function getPhaseTargetTime(phase) {
   // For jump phase, return time based on training level
   if (phase === "jump") {
     if (selectedWeek === 1) {
-      return 3; // Beginner: 3 minutes
+      return 18; // Beginner: 18 minutes (30 jumps with 30s rest)
     } else if (selectedWeek === 2) {
-      return 4; // Intermediate: 4 minutes
+      return 18; // Intermediate: 18 minutes (30 jumps with 30s rest)
     } else if (selectedWeek === 3) {
-      return 5; // Advanced: 5 minutes
+      return 18; // Advanced: 18 minutes (30 jumps with 30s rest)
     } else if (selectedWeek === 4) {
-      return 3; // Deload: 3 minutes
+      return 18; // Deload: 18 minutes (30 jumps with 30s rest)
     }
   }
 
