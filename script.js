@@ -1458,6 +1458,7 @@ const exerciseBaseTimes = {
     "Broad Jump": 0.5,
     "Lateral Bounds": 0.5,
     "Tuck Jumps": 0.5,
+    "8\" Box Jump with Rebound (Drop Landing + Vertical Jump)": 0.5,
     "Depth Jumps": 0.5,
     "Single Leg Hops": 0.5,
     "Split Jump Lunges": 0.5,
@@ -1591,6 +1592,7 @@ const exerciseMaxRounds = {
     "Broad Jump": 8,
     "Lateral Bounds": 8,
     "Tuck Jumps": 8,
+    "8\" Box Jump with Rebound (Drop Landing + Vertical Jump)": 3,
     "Depth Jumps": 8,
     "Single Leg Hops": 8,
     "Split Jump Lunges": 8,
@@ -3465,15 +3467,7 @@ function updateApp() {
                                             <span style="background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; min-width: 80px; text-align: center; white-space: nowrap;">
                                                 ${
                                                   phase === "jump"
-                                                    ? `${exerciseRounds} rounds × ${
-                                                        selectedWeek === 1
-                                                          ? "20s"
-                                                          : selectedWeek === 2
-                                                          ? "30s"
-                                                          : selectedWeek === 3
-                                                          ? "30s"
-                                                          : "20s"
-                                                      } each`
+                                                    ? `${exerciseRounds} sets × 10 reps`
                                                     : phase === "sit" ||
                                                       phase === "activation"
                                                     ? `${exerciseRounds} rounds × ${ex.reps}`
@@ -3493,15 +3487,7 @@ function updateApp() {
                                         <span style="background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; white-space: nowrap;">
                                             ${
                                               phase === "jump"
-                                                ? `${exerciseRounds} × ${
-                                                    selectedWeek === 1
-                                                      ? "20s"
-                                                      : selectedWeek === 2
-                                                      ? "30s"
-                                                      : selectedWeek === 3
-                                                      ? "30s"
-                                                      : "20s"
-                                                  }`
+                                                ? `${exerciseRounds} sets`
                                                 : phase === "sit" ||
                                                   phase === "activation"
                                                 ? `${exerciseRounds} × ${ex.reps}`
@@ -3521,7 +3507,9 @@ function updateApp() {
                                     <div class="exercise-details">
                                         <span>
                                           ${
-                                            phase === "jump" || phase === "sit"
+                                            phase === "jump"
+                                              ? `${ex.reps}`
+                                              : phase === "sit"
                                               ? `${
                                                   selectedWeek === 1
                                                     ? "20s"
