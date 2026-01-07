@@ -136,9 +136,9 @@ document.addEventListener(
 const weeklyFrameworks = {
   1: {
     monday: {
-      type: "Jump + Resistance",
-      duration: { standard: 40, quick: 30, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      type: "Resistance Training",
+      duration: { standard: 30, quick: 25, extended: 35 },
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -146,36 +146,38 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility",
-      duration: { standard: 20, quick: 10, extended: 30 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 18, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Resistance",
-      duration: { standard: 40, quick: 30, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      type: "Resistance Training",
+      duration: { standard: 30, quick: 25, extended: 35 },
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility",
-      duration: { standard: 20, quick: 10, extended: 30 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 18, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     saturday: {
       type: "Resistance Training",
-      duration: { standard: 35, quick: 25, extended: 45 },
+      duration: { standard: 30, quick: 25, extended: 35 },
       phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session",
+      type: "SIT Session (Optional: Add Jump Training)",
       duration: { standard: 25, quick: 15, extended: 35 },
       phases: ["activation", "sit", "cooldown"],
+      optionalPhases: ["jump"],
+      note: "Optional 3rd jump session can be done 4+ hours before or after SIT",
     },
   },
   2: {
     monday: {
-      type: "Jump + Resistance",
-      duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      type: "Resistance Training",
+      duration: { standard: 30, quick: 25, extended: 35 },
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -183,36 +185,38 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 25, quick: 15, extended: 35 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 18, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Resistance",
-      duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      type: "Resistance Training",
+      duration: { standard: 30, quick: 25, extended: 35 },
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 25, quick: 15, extended: 35 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 18, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     saturday: {
-      type: "Jump + Resistance",
-      duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      type: "Resistance Training",
+      duration: { standard: 30, quick: 25, extended: 35 },
+      phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session",
+      type: "SIT Session (Optional: Add Jump Training)",
       duration: { standard: 25, quick: 18, extended: 30 },
       phases: ["activation", "sit", "cooldown"],
+      optionalPhases: ["jump"],
+      note: "Optional 3rd jump session can be done 4+ hours before or after SIT",
     },
   },
   3: {
     monday: {
-      type: "Jump + Heavy Resistance",
-      duration: { standard: 50, quick: 40, extended: 60 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      type: "Heavy Resistance",
+      duration: { standard: 35, quick: 30, extended: 45 },
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -220,29 +224,31 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 30, quick: 20, extended: 40 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 18, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Heavy Resistance",
-      duration: { standard: 50, quick: 40, extended: 60 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      type: "Heavy Resistance",
+      duration: { standard: 35, quick: 30, extended: 45 },
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 30, quick: 20, extended: 40 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 18, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     saturday: {
-      type: "Power + Integration",
-      duration: { standard: 45, quick: 35, extended: 55 },
-      phases: ["activation", "power", "integration", "cooldown"],
+      type: "Heavy Resistance",
+      duration: { standard: 35, quick: 30, extended: 45 },
+      phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session",
+      type: "SIT Session (Optional: Add Jump Training)",
       duration: { standard: 30, quick: 20, extended: 35 },
       phases: ["activation", "sit", "cooldown"],
+      optionalPhases: ["jump"],
+      note: "Optional 3rd jump session can be done 4+ hours before or after SIT",
     },
   },
   4: {
@@ -1457,8 +1463,7 @@ const exerciseBaseTimes = {
     "Box Step Downs": 0.5,
     "Broad Jump": 0.5,
     "Lateral Bounds": 0.5,
-    "Tuck Jumps": 0.5,
-    "8\" Box Jump with Rebound (Drop Landing + Vertical Jump)": 0.5,
+    '8" Box Jump with Rebound (Drop Landing + Vertical Jump)': 0.5,
     "Depth Jumps": 0.5,
     "Single Leg Hops": 0.5,
     "Split Jump Lunges": 0.5,
@@ -1591,8 +1596,7 @@ const exerciseMaxRounds = {
     "Box Step Downs": 8,
     "Broad Jump": 8,
     "Lateral Bounds": 8,
-    "Tuck Jumps": 8,
-    "8\" Box Jump with Rebound (Drop Landing + Vertical Jump)": 3,
+    '8" Box Jump with Rebound (Drop Landing + Vertical Jump)': 3,
     "Depth Jumps": 8,
     "Single Leg Hops": 8,
     "Split Jump Lunges": 8,
@@ -1781,24 +1785,21 @@ function calculateRounds(phase, selectedExercises) {
     if (customRounds[customKey] !== undefined) {
       rounds[exerciseName] = customRounds[customKey];
     } else {
-      let baseTime;
-
+      // For jump phase, always use 3 sets (research-backed protocol: 3 sets × 10 reps = 30 jumps)
       if (phase === "jump") {
-        baseTime = workIntervalMinutes;
+        rounds[exerciseName] = 3;
       } else {
-        baseTime = exerciseBaseTimes[exercisePhase]?.[exerciseName] || 2;
+        let baseTime = exerciseBaseTimes[exercisePhase]?.[exerciseName] || 2;
+
+        const calculatedRounds = Math.max(
+          1,
+          Math.round(timePerExercise / baseTime)
+        );
+        const cappedRounds = Math.min(calculatedRounds, 6);
+
+        rounds[exerciseName] =
+          trainingWeek === 4 ? Math.ceil(cappedRounds * 0.6) : cappedRounds;
       }
-
-      const calculatedRounds = Math.max(
-        1,
-        Math.round(timePerExercise / baseTime)
-      );
-      // For jump phase, allow more rounds to hit target time; for other phases cap at 6
-      const cappedRounds =
-        phase === "jump" ? calculatedRounds : Math.min(calculatedRounds, 6);
-
-      rounds[exerciseName] =
-        trainingWeek === 4 ? Math.ceil(cappedRounds * 0.6) : cappedRounds;
     }
   });
 
