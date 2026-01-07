@@ -1458,16 +1458,14 @@ const exerciseBaseTimes = {
     // Week 1 (Beginner): 40 seconds = 0.67 min
     // Week 2 (Intermediate): 30 seconds = 0.5 min
     // Week 3 (Advanced): 20 seconds = 0.33 min
-    "Squat Jump with Landing": 0.5,
-    "Step-Up with Knee Drive": 0.5,
-    "Box Step Downs": 0.5,
-    "Broad Jump": 0.5,
-    "Lateral Bounds": 0.5,
+    "Squat Jump with Full-Foot Loading": 0.5,
+    "Stiff-Leg Reactive Hops (Ankle Reactivity)": 0.5,
+    "Broad Jump with Deceleration & Full-Foot Landing": 0.5,
+    "Single-Leg Hops (Lateral Ankle Stability)": 0.5,
+    "Lateral Bounds (Frontal Plane Loading)": 0.5,
     '8" Box Jump with Rebound (Drop Landing + Vertical Jump)': 0.5,
-    "Depth Jumps": 0.5,
-    "Single Leg Hops": 0.5,
-    "Split Jump Lunges": 0.5,
-    "Forward Hops": 0.5,
+    "Depth Jump with Vertical Pop (Stretch-Shortening Cycle)": 0.5,
+    "Transverse Rotation Jumps (Anti-Rotation Loading)": 0.5,
   },
   strength: {
     "Goblet Squat": 2.5,
@@ -1591,16 +1589,14 @@ const exerciseBaseTimes = {
 
 const exerciseMaxRounds = {
   jump: {
-    "Squat Jump with Landing": 8,
-    "Step-Up with Knee Drive": 8,
-    "Box Step Downs": 8,
-    "Broad Jump": 8,
-    "Lateral Bounds": 8,
+    "Squat Jump with Full-Foot Loading": 8,
+    "Stiff-Leg Reactive Hops (Ankle Reactivity)": 8,
+    "Broad Jump with Deceleration & Full-Foot Landing": 8,
+    "Single-Leg Hops (Lateral Ankle Stability)": 8,
+    "Lateral Bounds (Frontal Plane Loading)": 8,
     '8" Box Jump with Rebound (Drop Landing + Vertical Jump)': 3,
-    "Depth Jumps": 8,
-    "Single Leg Hops": 8,
-    "Split Jump Lunges": 8,
-    "Forward Hops": 8,
+    "Depth Jump with Vertical Pop (Stretch-Shortening Cycle)": 8,
+    "Transverse Rotation Jumps (Anti-Rotation Loading)": 8,
   },
   strength: {
     "Goblet Squat": 8,
