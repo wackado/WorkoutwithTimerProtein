@@ -384,7 +384,7 @@ const exerciseOptions = {
         "[RESEARCH-BACKED] Jump laterally from single leg to single leg with control. **Land on entire foot, absorbing force through hip abductors and glutes.** Hold the landing position for 2 seconds to demonstrate control. Most falls occur in the frontal plane (side-to-side)—this movement trains anti-gravity muscles and dynamic stability in this critical direction. Full-foot landings maximize hip bone loading. Rest 30 seconds between bounds to allow bone response. Develops hip abductor strength essential for balance and fall prevention.",
     },
     {
-      name: "8\" Box Jump with Rebound (Drop Landing + Vertical Jump)",
+      name: '8" Box Jump with Rebound (Drop Landing + Vertical Jump)',
       reps: "10 reps",
       weight: "bodyweight",
       time: "3 sets",
