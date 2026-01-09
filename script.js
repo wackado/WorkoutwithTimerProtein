@@ -166,11 +166,10 @@ const weeklyFrameworks = {
       phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session (Optional: Add Jump Training)",
-      duration: { standard: 25, quick: 15, extended: 35 },
+      type: "SIT Session or 3rd Jump Training",
+      duration: { standard: 25, quick: 20, extended: 45 },
       phases: ["activation", "sit", "cooldown"],
-      optionalPhases: ["jump"],
-      note: "Optional 3rd jump session can be done 4+ hours before or after SIT",
+      note: "For optimal bone health (3 jumps/week), you can: (1) Replace SIT with Jump Training, (2) Do Jump Training earlier (4+ hours before SIT), or (3) Do Jump Training before Monday's resistance workout",
     },
   },
   2: {
@@ -205,11 +204,10 @@ const weeklyFrameworks = {
       phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session (Optional: Add Jump Training)",
-      duration: { standard: 25, quick: 18, extended: 30 },
+      type: "SIT Session or 3rd Jump Training",
+      duration: { standard: 25, quick: 20, extended: 45 },
       phases: ["activation", "sit", "cooldown"],
-      optionalPhases: ["jump"],
-      note: "Optional 3rd jump session can be done 4+ hours before or after SIT",
+      note: "For optimal bone health (3 jumps/week), you can: (1) Replace SIT with Jump Training, (2) Do Jump Training earlier (4+ hours before SIT), or (3) Do Jump Training before Monday's resistance workout",
     },
   },
   3: {
@@ -244,11 +242,10 @@ const weeklyFrameworks = {
       phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session (Optional: Add Jump Training)",
-      duration: { standard: 30, quick: 20, extended: 35 },
+      type: "SIT Session or 3rd Jump Training",
+      duration: { standard: 30, quick: 25, extended: 50 },
       phases: ["activation", "sit", "cooldown"],
-      optionalPhases: ["jump"],
-      note: "Optional 3rd jump session can be done 4+ hours before or after SIT",
+      note: "For optimal bone health (3 jumps/week), you can: (1) Replace SIT with Jump Training, (2) Do Jump Training earlier (4+ hours before SIT), or (3) Do Jump Training before Monday's resistance workout",
     },
   },
   4: {
@@ -384,7 +381,7 @@ const exerciseOptions = {
         "[RESEARCH-BACKED] Jump laterally from single leg to single leg with control. **Land on entire foot, absorbing force through hip abductors and glutes.** Hold the landing position for 2 seconds to demonstrate control. Most falls occur in the frontal plane (side-to-side)—this movement trains anti-gravity muscles and dynamic stability in this critical direction. Full-foot landings maximize hip bone loading. Rest 30 seconds between bounds to allow bone response. Develops hip abductor strength essential for balance and fall prevention.",
     },
     {
-      name: '8" Box Jump with Rebound (Drop Landing + Vertical Jump)',
+      name: "8-inch Box Jump with Rebound (Drop Landing + Vertical Jump)",
       reps: "10 reps",
       weight: "bodyweight",
       time: "3 sets",
@@ -1463,7 +1460,7 @@ const exerciseBaseTimes = {
     "Broad Jump with Deceleration & Full-Foot Landing": 0.5,
     "Single-Leg Hops (Lateral Ankle Stability)": 0.5,
     "Lateral Bounds (Frontal Plane Loading)": 0.5,
-    '8" Box Jump with Rebound (Drop Landing + Vertical Jump)': 0.5,
+    "8-inch Box Jump with Rebound (Drop Landing + Vertical Jump)": 0.5,
     "Depth Jump with Vertical Pop (Stretch-Shortening Cycle)": 0.5,
     "Transverse Rotation Jumps (Anti-Rotation Loading)": 0.5,
   },
@@ -1594,7 +1591,7 @@ const exerciseMaxRounds = {
     "Broad Jump with Deceleration & Full-Foot Landing": 8,
     "Single-Leg Hops (Lateral Ankle Stability)": 8,
     "Lateral Bounds (Frontal Plane Loading)": 8,
-    '8" Box Jump with Rebound (Drop Landing + Vertical Jump)': 3,
+    "8-inch Box Jump with Rebound (Drop Landing + Vertical Jump)": 3,
     "Depth Jump with Vertical Pop (Stretch-Shortening Cycle)": 8,
     "Transverse Rotation Jumps (Anti-Rotation Loading)": 8,
   },
@@ -3552,19 +3549,7 @@ function updateApp() {
                                 <div class="exercise-card" data-key="${key}" data-phase="${phase}">
                                     <h4>${ex.name}</h4>
                                     <div class="exercise-details">
-                                        <span>${
-                                          phase === "jump"
-                                            ? `${
-                                                selectedWeek === 1
-                                                  ? "20s"
-                                                  : selectedWeek === 2
-                                                  ? "30s"
-                                                  : selectedWeek === 3
-                                                  ? "30s"
-                                                  : "20s"
-                                              }`
-                                            : ex.reps
-                                        }</span>
+                                        <span>${ex.reps}</span>
                                         <span>${ex.weight}</span>
                                         <span>Rest: ${ex.rest}</span>
                                     </div>
