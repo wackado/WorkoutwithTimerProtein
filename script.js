@@ -1414,8 +1414,231 @@ const exerciseOptions = {
     },
   ],
 };
+// ADDITION TO script.js: Push/Pull Exercise Categorization and Balance Guidance
 
+// Add this near the top of script.js, after exerciseOptions definition:
+
+const exerciseMovementType = {
+  // PUSH exercises: chest, shoulders, triceps, front-dominant movements
+  push: [
+    "Thruster Complex",
+    "Modified Thrusters",
+    "DB Thruster",
+    "Goblet Squat with Arnold Press",
+    "Squat to Calf Raise with Overhead Press",
+    "Reverse Lunge with Hammer Curl to Press",
+    "Side Lunge with Overhead Press",
+    "Squat Hold with Alternating Shoulder Press",
+    "Curtsy Lunge with Lateral Raise",
+    "Walking Lunge with Bicep Curl to Press",
+    "Bulgarian Split Squat with Tricep Extension",
+    "Single-Leg Deadlift with Lateral Raise",
+    "Push-Up Variations",
+    "Push-Up to T-Rotation",
+    "Tricep Dips (Chair)",
+    "Modified Tricep Dips",
+    "Explosive Push-Ups",
+    "Dumbbell Bench Press",
+    "Shoulder Press",
+    "Arnold Press",
+  ],
+  
+  // PULL exercises: back, rear delts, biceps, back-dominant movements
+  pull: [
+    "Renegade Rows",
+    "DB Deadlift",
+    "Single-Leg RDL",
+    "Step-Up with Bicep Curl",
+    "Deadlift to Upright Row to Curl",
+    "Sumo Squat with Bicep Curl Hold",
+    "Turkish Get-Up",
+    "DB Snatch",
+    "Power Cleans",
+    "Heavy Snatches",
+    "Bent-Over Rows",
+    "Face Pulls",
+    "Reverse Pec Deck",
+    "Lat Pulldowns",
+    "Pull-Ups/Chin-Ups",
+    "Inverted Rows",
+  ],
+
+  // BALANCED/COMPOUND: movements that engage both push and pull patterns
+  balanced: [
+    "Goblet Squat",
+    "Heavy DB Swings",
+    "Light DB Swings",
+    "Medicine Ball Slams",
+  ],
+};
+
+// Function to categorize exercises in strength phase
+function getExerciseMovementType(exerciseName) {
+  if (exerciseMovementType.push.includes(exerciseName)) {
+    return "push";
+  } else if (exerciseMovementType.pull.includes(exerciseName)) {
+    return "pull";
+  } else if (exerciseMovementType.balanced.includes(exerciseName)) {
+    return "balanced";
+  }
+  return "unknown"; // Lower body or other exercises not categorized
+}
+
+// Function to analyze push/pull balance of selected exercises
+function analyzePushPullBalance() {
+  const strengthPhase = Array.from(document.querySelectorAll('[data-phase="strength"] .exercise-checkbox:checked'))
+    .map(el => el.value);
+  
+  let pushCount = 0;
+  let pullCount = 0;
+  let balancedCount = 0;
+  let otherCount = 0;
+
+  strengthPhase.forEach(exercise => {
+    const type = getExerciseMovementType(exercise);
+    if (type === "push") pushCount++;
+    else if (type === "pull") pullCount++;
+    else if (type === "balanced") balancedCount++;
+    else otherCount++;
+  });
+
+  return {
+    push: pushCount,
+    pull: pullCount,
+    balanced: balancedCount,
+    other: otherCount,
+    total: strengthPhase.length,
+  };
+}
+
+// Function to display push/pull balance indicator
+function updatePushPullBalance() {
+  const balance = analyzePushPullBalance();
+  
+  // Find or create balance display container
+  let balanceContainer = document.getElementById("pushPullBalance");
+  if (!balanceContainer && balance.total > 0) {
+    const strengthCard = document.querySelector('[data-phase="strength"]');
+    if (strengthCard) {
+      balanceContainer = document.createElement("div");
+      balanceContainer.id = "pushPullBalance";
+      strengthCard.insertBefore(balanceContainer, strengthCard.firstChild);
+    }
+  }
+
+  if (balanceContainer && balance.total > 0) {
+    const pushPercent = ((balance.push / balance.total) * 100).toFixed(0);
+    const pullPercent = ((balance.pull / balance.total) * 100).toFixed(0);
+    const balancedPercent = ((balance.balanced / balance.total) * 100).toFixed(0);
+
+    let balanceStatus = "";
+    if (pushPercent > 60) {
+      balanceStatus = "⚠️ HEAVY PUSH - Add more pull exercises for postural balance";
+    } else if (pullPercent > 60) {
+      balanceStatus = "✓ PULL EMPHASIS - Good for postmenopausal back strength and posture";
+    } else if (Math.abs(pushPercent - pullPercent) <= 20) {
+      balanceStatus = "✓ BALANCED - Well-rounded upper body development";
+    } else {
+      balanceStatus = "";
+    }
+
+    balanceContainer.innerHTML = `
+      <div style="
+        background: #f0fdf4;
+        border: 1px solid #86efac;
+        border-radius: 6px;
+        padding: 12px;
+        margin-bottom: 12px;
+        font-size: 13px;
+      ">
+        <p style="margin: 0 0 8px 0; font-weight: 600; color: #166534;">
+          Push/Pull Balance Analysis
+        </p>
+        <div style="display: flex; gap: 16px; margin-bottom: 8px;">
+          <div>
+            <span style="font-weight: 600; color: #059669;">Push:</span> 
+            <span>${balance.push} (${pushPercent}%)</span>
+          </div>
+          <div>
+            <span style="font-weight: 600; color: #0891b2;">Pull:</span> 
+            <span>${balance.pull} (${pullPercent}%)</span>
+          </div>
+          ${balance.balanced > 0 ? `
+            <div>
+              <span style="font-weight: 600; color: #7c3aed;">Balanced:</span> 
+              <span>${balance.balanced} (${balancedPercent}%)</span>
+            </div>
+          ` : ""}
+        </div>
+        ${balanceStatus ? `
+          <p style="margin: 8px 0 0 0; color: #166534; font-size: 12px;">
+            ${balanceStatus}
+          </p>
+        ` : ""}
+      </div>
+    `;
+  }
+}
+
+// Add guidance section to strength phase
+function addPushPullGuidance() {
+  const strengthPhaseSection = document.querySelector('[data-phase="strength"]');
+  
+  if (strengthPhaseSection) {
+    let guidanceBox = document.getElementById("pushPullGuidance");
+    if (!guidanceBox) {
+      guidanceBox = document.createElement("div");
+      guidanceBox.id = "pushPullGuidance";
+      strengthPhaseSection.insertBefore(guidanceBox, strengthPhaseSection.firstChild);
+    }
+
+    guidanceBox.innerHTML = `
+      <div style="
+        background: #ede9fe;
+        border: 1px solid #c4b5fd;
+        border-radius: 6px;
+        padding: 12px;
+        margin-bottom: 12px;
+        font-size: 13px;
+      ">
+        <p style="margin: 0 0 8px 0; font-weight: 600; color: #5b21b6;">
+          📋 Push/Pull Balance Tips for Postmenopausal Women
+        </p>
+        <ul style="margin: 0; padding-left: 20px; color: #5b21b6; line-height: 1.5;">
+          <li><strong>Aim for balance:</strong> Roughly equal push and pull exercises per session</li>
+          <li><strong>Back emphasis:</strong> Pull exercises (rows, pull-ups, face pulls) are critical for posture and shoulder health as estrogen declines</li>
+          <li><strong>Avoid muscle imbalances:</strong> Too many press variations without rows can lead to anterior shoulder rounding - a common postmenopausal posture issue</li>
+          <li><strong>Bone health:</strong> Both push and pull movements load your bones differently - variety ensures comprehensive stimulus</li>
+        </ul>
+      </div>
+    `;
+  }
+}
+
+// Hook these functions into the exercise selection update
+// Add this to wherever exercises are rendered/selected in the app:
+
+// When exercise checkboxes are created, add event listeners
+function setupExerciseEventListeners() {
+  document.addEventListener("change", (e) => {
+    if (e.target.classList.contains("exercise-checkbox")) {
+      // Update balance display whenever exercises are selected/deselected
+      updatePushPullBalance();
+    }
+  });
+}
+
+// Call this during initial render
+function initializePushPullSystem() {
+  addPushPullGuidance();
+  updatePushPullBalance();
+  setupExerciseEventListeners();
+}
+
+// Make sure this is called when the app updates the exercise selection UI
+// Add to the updateApp() function or wherever exercise UI is rendered
 // Continue with rest of the code...
+
 function getCurrentWorkout() {
   return (
     weeklyFrameworks[selectedWeek]?.[selectedDay] || {
