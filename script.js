@@ -3703,52 +3703,7 @@ function updateApp() {
                           </div>
                         ` : ""}
                         <h4>Available Exercises</h4>
-                        ${phase === "strength" ? `
-                          <div style="margin-bottom: 24px;">
-                            <h5 style="color: #d97706; font-size: 16px; font-weight: 600; margin-bottom: 12px; margin-top: 0;">PUSH Exercises</h5>
-                            <div class="exercise-grid">
-                              ${exercises
-                                .filter((e) => !e.isSelected && getExerciseMovementType(e.ex.name) === "push")
-                                .map(
-                                  ({ ex, key }) => `
-                                  <div class="exercise-card" data-key="${key}" data-phase="${phase}">
-                                      <h4>${ex.name}</h4>
-                                      <div class="exercise-details">
-                                          <span>${ex.reps}</span>
-                                          <span>${ex.weight}</span>
-                                          <span>Rest: ${ex.rest}</span>
-                                      </div>
-                                      <p style="margin-top: 8px; font-size: 13px; color: #6b7280; line-height: 1.3;">${ex.description}</p>
-                                  </div>
-                              `
-                                )
-                                .join("")}
-                            </div>
-                          </div>
-
-                          <div>
-                            <h5 style="color: #0891b2; font-size: 16px; font-weight: 600; margin-bottom: 12px; margin-top: 0;">PULL Exercises</h5>
-                            <div class="exercise-grid">
-                              ${exercises
-                                .filter((e) => !e.isSelected && getExerciseMovementType(e.ex.name) === "pull")
-                                .map(
-                                  ({ ex, key }) => `
-                                  <div class="exercise-card" data-key="${key}" data-phase="${phase}">
-                                      <h4>${ex.name}</h4>
-                                      <div class="exercise-details">
-                                          <span>${ex.reps}</span>
-                                          <span>${ex.weight}</span>
-                                          <span>Rest: ${ex.rest}</span>
-                                      </div>
-                                      <p style="margin-top: 8px; font-size: 13px; color: #6b7280; line-height: 1.3;">${ex.description}</p>
-                                  </div>
-                              `
-                                )
-                                .join("")}
-                            </div>
-                          </div>
-                        ` : `
-                          <div class="exercise-grid">
+                        <div class="exercise-grid">
                             ${exercises
                               .filter((e) => !e.isSelected)
                               .map(
@@ -3777,8 +3732,7 @@ function updateApp() {
                             `
                               )
                               .join("")}
-                          </div>
-                        `}
+                        </div>
                     </div>
                 `
                     : ""
