@@ -1443,11 +1443,8 @@ const exerciseMovementType = {
     "Goblet Squat",
     "Bulgarian Split Squat with Tricep Extension",
     "Curtsy Lunge with Lateral Raise",
-    "Reverse Lunge with Hammer Curl to Press",
     "Side Lunge with Overhead Press",
     "Squat Hold with Alternating Shoulder Press",
-    "Step-Up with Bicep Curl",
-    "Walking Lunge with Bicep Curl to Press",
   ],
   pull: [
     // Upper Body Pulling
@@ -1460,6 +1457,10 @@ const exerciseMovementType = {
     "DB Snatch",
     "Power Cleans",
     "Heavy Snatches",
+    // Leg + Arm Pull combinations (bicep curl is the upper body component)
+    "Step-Up with Bicep Curl",
+    "Walking Lunge with Bicep Curl to Press",
+    "Reverse Lunge with Hammer Curl to Press",
     // Lower Body - Hip/Hamstring Dominant (hip hinge focus)
     "Single-Leg Deadlift with Lateral Raise",
   ],
@@ -3573,7 +3574,6 @@ function updateApp() {
                     : ""
                 }
                 ${isPhaseOpen && phase === "activation" ? `` : ""}
-                ${phase === "strength" && isPhaseOpen ? getPushPullBalanceHTML() : ""}
                 ${
                   exercises.filter((e) => e.isSelected).length
                     ? `
@@ -3695,7 +3695,7 @@ function updateApp() {
                         ${phase === "strength" ? `
                           <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin-bottom: 16px; border-radius: 4px;">
                             <p style="margin: 0 0 8px 0; font-size: 14px; color: #92400e; line-height: 1.4;">
-                              <strong>💡 Upper Body Balance:</strong> Select a mix of PUSH (presses, pushups) and PULL (rows, deadlifts) exercises. This prevents shoulder/postural imbalances as estrogen declines.
+                              <strong>Upper Body Balance:</strong> Select a mix of PUSH (presses, pushups) and PULL (rows, deadlifts) exercises. This prevents shoulder/postural imbalances as estrogen declines.
                             </p>
                             <p style="margin: 0; font-size: 13px; color: #92400e; line-height: 1.4;">
                               <strong>Lower Body Balance:</strong> Combine quad-dominant moves (squats, lunges) with hip-dominant moves (deadlifts, RDLs). Example: If doing 2 squats, add a deadlift for complete leg development.
@@ -3705,7 +3705,7 @@ function updateApp() {
                         <h4>Available Exercises</h4>
                         ${phase === "strength" ? `
                           <div style="margin-bottom: 24px;">
-                            <h5 style="color: #d97706; font-size: 16px; font-weight: 600; margin-bottom: 12px; margin-top: 0;">💪 PUSH Exercises</h5>
+                            <h5 style="color: #d97706; font-size: 16px; font-weight: 600; margin-bottom: 12px; margin-top: 0;">PUSH Exercises</h5>
                             <div class="exercise-grid">
                               ${exercises
                                 .filter((e) => !e.isSelected && getExerciseMovementType(e.ex.name) === "push")
@@ -3727,7 +3727,7 @@ function updateApp() {
                           </div>
 
                           <div>
-                            <h5 style="color: #0891b2; font-size: 16px; font-weight: 600; margin-bottom: 12px; margin-top: 0;">🔄 PULL Exercises</h5>
+                            <h5 style="color: #0891b2; font-size: 16px; font-weight: 600; margin-bottom: 12px; margin-top: 0;">PULL Exercises</h5>
                             <div class="exercise-grid">
                               ${exercises
                                 .filter((e) => !e.isSelected && getExerciseMovementType(e.ex.name) === "pull")
