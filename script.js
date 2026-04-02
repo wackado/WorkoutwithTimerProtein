@@ -1415,6 +1415,89 @@ const exerciseOptions = {
   ],
 };
 
+// ===== PUSH/PULL BALANCE FEATURE =====
+const exerciseMovementType = {
+  push: [
+    "Thruster Complex",
+    "Modified Thrusters", 
+    "DB Thruster",
+    "Goblet Squat with Arnold Press",
+    "Squat to Calf Raise with Overhead Press",
+    "Push-Up Variations",
+    "Push-Up to T-Rotation",
+    "Tricep Dips (Chair)",
+    "Modified Tricep Dips",
+    "Explosive Push-Ups",
+  ],
+  pull: [
+    "Renegade Rows",
+    "DB Deadlift",
+    "Single-Leg RDL",
+    "Step-Up with Bicep Curl",
+    "Deadlift to Upright Row to Curl",
+    "Sumo Squat with Bicep Curl Hold",
+    "Turkish Get-Up",
+    "DB Snatch",
+    "Power Cleans",
+    "Heavy Snatches",
+  ],
+};
+
+function getExerciseMovementType(exerciseName) {
+  if (exerciseMovementType.push.includes(exerciseName)) return "push";
+  if (exerciseMovementType.pull.includes(exerciseName)) return "pull";
+  return "other";
+}
+
+function analyzePushPullBalance() {
+  const strengthExercises = getSelectedExercises("strength");
+  let push = 0, pull = 0;
+
+  strengthExercises.forEach(exercise => {
+    const type = getExerciseMovementType(exercise);
+    if (type === "push") push++;
+    else if (type === "pull") pull++;
+  });
+
+  return { push, pull, total: push + pull };
+}
+
+function getPushPullBalanceHTML() {
+  const balance = analyzePushPullBalance();
+  
+  if (balance.total === 0) return "";
+
+  const pushPercent = ((balance.push / balance.total) * 100).toFixed(0);
+  const pullPercent = ((balance.pull / balance.total) * 100).toFixed(0);
+
+  let status = "", color = "#059669";
+  
+  if (pushPercent > 60) {
+    status = "⚠️ Too many push exercises - add more pull work for postural balance";
+    color = "#dc2626";
+  } else if (pullPercent > 60) {
+    status = "✓ Good pull emphasis - critical for postmenopausal back strength";
+    color = "#059669";
+  } else if (Math.abs(pushPercent - pullPercent) <= 20) {
+    status = "✓ Balanced - well-rounded upper body training";
+    color = "#059669";
+  }
+
+  return `
+    <div style="background: #f0fdf4; border: 2px solid ${color}; border-radius: 6px; padding: 12px; margin-bottom: 12px; font-size: 13px;">
+      <p style="margin: 0 0 8px 0; font-weight: 600; color: #166534;">
+        💪 Push/Pull Balance
+      </p>
+      <div style="display: flex; gap: 16px; margin-bottom: 8px;">
+        <span><strong style="color: #d97706;">Push:</strong> ${balance.push} (${pushPercent}%)</span>
+        <span><strong style="color: #0891b2;">Pull:</strong> ${balance.pull} (${pullPercent}%)</span>
+      </div>
+      ${status ? `<p style="margin: 0; color: ${color}; font-weight: 600; font-size: 12px;">${status}</p>` : ""}
+    </div>
+  `;
+}
+// ===== END PUSH/PULL BALANCE FEATURE =====
+
 // Continue with rest of the code...
 
 function getCurrentWorkout() {
@@ -3465,6 +3548,7 @@ function updateApp() {
                     : ""
                 }
                 ${isPhaseOpen && phase === "activation" ? `` : ""}
+                ${phase === "strength" && isPhaseOpen ? getPushPullBalanceHTML() : ""}
                 ${
                   exercises.filter((e) => e.isSelected).length
                     ? `
@@ -3625,6 +3709,15 @@ function updateApp() {
     `;
     })
     .join("");
+
+  // Initialize push/pull balance system for strength phase
+  setTimeout(() => {
+    if (document.querySelector('[data-phase="strength"]')) {
+      addPushPullGuidance();
+      updatePushPullBalance();
+      setupExerciseEventListeners();
+    }
+  }, 0);
 
   addEventListeners();
   restoreOpenPhases();
