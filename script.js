@@ -3710,15 +3710,6 @@ function updateApp() {
     })
     .join("");
 
-  // Initialize push/pull balance system for strength phase
-  setTimeout(() => {
-    if (document.querySelector('[data-phase="strength"]')) {
-      addPushPullGuidance();
-      updatePushPullBalance();
-      setupExerciseEventListeners();
-    }
-  }, 0);
-
   addEventListeners();
   restoreOpenPhases();
 }
