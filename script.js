@@ -309,6 +309,7 @@ const phaseExplanations = {
   power:
     "Power training preserves fast-twitch muscle fibers that decline rapidly during menopause. These explosive movements improve your ability to react quickly (fall prevention), maintain bone density, and perform daily activities with confidence and strength.",
   sit: "SIT (Sprint Interval Training) sessions should be SHORT and INTENSE. Mix different exercises to keep it interesting while maintaining maximum effort. Target 80-100% of your maximum heart rate during work intervals!",
+  strength: "Build muscle and bone density with progressive overload. Quality over quantity: 3 strict pushups with perfect form provide more stimulus than 10 sloppy ones. When increasing weight, expect fewer reps - this is normal and shows progression. Good form prevents injury and maximizes results.",
 };
 
 const phaseInstructions = {
@@ -3695,7 +3696,7 @@ function updateApp() {
                         ${phase === "strength" ? `
                           <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin-bottom: 16px; border-radius: 4px;">
                             <p style="margin: 0 0 8px 0; font-size: 14px; color: #92400e; line-height: 1.4;">
-                              <strong>Upper Body Balance:</strong> Select a mix of PUSH (presses, pushups) and PULL (rows, deadlifts) exercises. This prevents shoulder/postural imbalances as estrogen declines.
+                              <strong>Same-Day Push/Pull:</strong> In this strength workout, select both PUSH (presses, pushups) and PULL (rows, deadlifts) exercises. Postmenopausal women benefit from balanced training in the same session for optimal recovery and to prevent shoulder/postural imbalances as estrogen declines.
                             </p>
                             <p style="margin: 0; font-size: 13px; color: #92400e; line-height: 1.4;">
                               <strong>Lower Body Balance:</strong> Combine quad-dominant moves (squats, lunges) with hip-dominant moves (deadlifts, RDLs). Example: If doing 2 squats, add a deadlift for complete leg development.
