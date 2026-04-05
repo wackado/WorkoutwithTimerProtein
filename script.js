@@ -136,9 +136,9 @@ document.addEventListener(
 const weeklyFrameworks = {
   1: {
     monday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 40, quick: 30, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -146,19 +146,19 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility",
-      duration: { standard: 20, quick: 10, extended: 30 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 15, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 40, quick: 30, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility",
-      duration: { standard: 20, quick: 10, extended: 30 },
-      phases: ["mobility", "cooldown"],
+      type: "SIT Session",
+      duration: { standard: 20, quick: 15, extended: 25 },
+      phases: ["activation", "sit", "cooldown"],
     },
     saturday: {
       type: "Resistance Training",
@@ -166,16 +166,16 @@ const weeklyFrameworks = {
       phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session",
-      duration: { standard: 25, quick: 15, extended: 35 },
-      phases: ["activation", "sit", "cooldown"],
+      type: "Rest or Mobility",
+      duration: { standard: 20, quick: 10, extended: 30 },
+      phases: ["mobility", "cooldown"],
     },
   },
   2: {
     monday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -183,36 +183,36 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 25, quick: 15, extended: 35 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 15, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 25, quick: 15, extended: 35 },
-      phases: ["mobility", "cooldown"],
+      type: "SIT Session",
+      duration: { standard: 30, quick: 20, extended: 40 },
+      phases: ["activation", "sit", "cooldown"],
     },
     saturday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session",
-      duration: { standard: 25, quick: 18, extended: 30 },
-      phases: ["activation", "sit", "cooldown"],
+      type: "Rest or Mobility",
+      duration: { standard: 25, quick: 15, extended: 35 },
+      phases: ["mobility", "cooldown"],
     },
   },
   3: {
     monday: {
-      type: "Jump + Heavy Resistance",
+      type: "Resistance Training",
       duration: { standard: 50, quick: 40, extended: 60 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -220,29 +220,29 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 30, quick: 20, extended: 40 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 15, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Heavy Resistance",
+      type: "Resistance Training",
       duration: { standard: 50, quick: 40, extended: 60 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 30, quick: 20, extended: 40 },
-      phases: ["mobility", "cooldown"],
-    },
-    saturday: {
-      type: "Power + Integration",
-      duration: { standard: 45, quick: 35, extended: 55 },
-      phases: ["activation", "power", "integration", "cooldown"],
-    },
-    sunday: {
       type: "SIT Session",
       duration: { standard: 30, quick: 20, extended: 35 },
       phases: ["activation", "sit", "cooldown"],
+    },
+    saturday: {
+      type: "Resistance Training",
+      duration: { standard: 50, quick: 40, extended: 60 },
+      phases: ["activation", "strength", "cooldown"],
+    },
+    sunday: {
+      type: "Rest or Mobility",
+      duration: { standard: 30, quick: 20, extended: 40 },
+      phases: ["mobility", "cooldown"],
     },
   },
   4: {
@@ -704,6 +704,15 @@ const exerciseOptions = {
       rest: "90s",
       description:
         "Start in push-up position. Push up so explosively that your hands leave the ground. Land softly with control and immediately lower for next rep. Modify on knees if needed.",
+    },
+    {
+      name: "Push-Ups",
+      reps: "6-12 reps",
+      weight: "bodyweight",
+      time: "1 round",
+      rest: "60-90s",
+      description:
+        "Standard push-up: hands shoulder-width apart, lower body until chest nearly touches floor, push back up. Keep core tight, elbows at 45 degrees. Modify on knees or incline if needed. Builds upper body pushing strength with bodyweight load.",
     },
   ],
   sit: [
@@ -1414,6 +1423,106 @@ const exerciseOptions = {
     },
   ],
 };
+
+// ===== PUSH/PULL BALANCE FEATURE =====
+const exerciseMovementType = {
+  push: [
+    // Upper Body Pushing
+    "Thruster Complex",
+    "Modified Thrusters", 
+    "DB Thruster",
+    "Goblet Squat with Arnold Press",
+    "Squat to Calf Raise with Overhead Press",
+    "Push-Up Variations",
+    "Push-Up to T-Rotation",
+    "Tricep Dips (Chair)",
+    "Modified Tricep Dips",
+    "Explosive Push-Ups",
+    "Push-Ups",
+    // Lower Body - Quad Dominant (knee extension focus)
+    "Goblet Squat",
+    "Bulgarian Split Squat with Tricep Extension",
+    "Curtsy Lunge with Lateral Raise",
+    "Side Lunge with Overhead Press",
+    "Squat Hold with Alternating Shoulder Press",
+  ],
+  pull: [
+    // Upper Body Pulling
+    "Renegade Rows",
+    "DB Deadlift",
+    "Single-Leg RDL",
+    "Deadlift to Upright Row to Curl",
+    "Sumo Squat with Bicep Curl Hold",
+    "Turkish Get-Up",
+    "DB Snatch",
+    "Power Cleans",
+    "Heavy Snatches",
+    // Leg + Arm Pull combinations (bicep curl is the upper body component)
+    "Step-Up with Bicep Curl",
+    "Walking Lunge with Bicep Curl to Press",
+    "Reverse Lunge with Hammer Curl to Press",
+    // Lower Body - Hip/Hamstring Dominant (hip hinge focus)
+    "Single-Leg Deadlift with Lateral Raise",
+  ],
+};
+
+function getExerciseMovementType(exerciseName) {
+  if (exerciseMovementType.push.includes(exerciseName)) return "push";
+  if (exerciseMovementType.pull.includes(exerciseName)) return "pull";
+  return "other";
+}
+
+function analyzePushPullBalance() {
+  const strengthExercises = getSelectedExercises("strength");
+  let push = 0, pull = 0;
+
+  strengthExercises.forEach(exercise => {
+    const type = getExerciseMovementType(exercise);
+    if (type === "push") push++;
+    else if (type === "pull") pull++;
+  });
+
+  return { push, pull, total: push + pull };
+}
+
+function getPushPullBalanceHTML() {
+  const balance = analyzePushPullBalance();
+  
+  if (balance.total === 0) return "";
+
+  const pushPercent = ((balance.push / balance.total) * 100).toFixed(0);
+  const pullPercent = ((balance.pull / balance.total) * 100).toFixed(0);
+
+  let status = "", color = "#059669";
+  
+  if (pushPercent > 60) {
+    status = "⚠️ Too many upper body pushes - add pulling exercises (rows, deadlifts) for shoulder/back balance";
+    color = "#dc2626";
+  } else if (pullPercent > 60) {
+    status = "✓ Good pull emphasis - excellent for postmenopausal back and shoulder health";
+    color = "#059669";
+  } else if (Math.abs(pushPercent - pullPercent) <= 20) {
+    status = "✓ Balanced upper body - solid shoulder and back development";
+    color = "#059669";
+  }
+
+  return `
+    <div style="background: #f0fdf4; border: 2px solid ${color}; border-radius: 6px; padding: 12px; margin-bottom: 12px; font-size: 13px;">
+      <p style="margin: 0 0 8px 0; font-weight: 600; color: #166534;">
+        💪 Upper Body Push/Pull Balance
+      </p>
+      <div style="display: flex; gap: 16px; margin-bottom: 8px;">
+        <span><strong style="color: #d97706;">Push:</strong> ${balance.push} (${pushPercent}%)</span>
+        <span><strong style="color: #0891b2;">Pull:</strong> ${balance.pull} (${pullPercent}%)</span>
+      </div>
+      ${status ? `<p style="margin: 0 0 8px 0; color: ${color}; font-weight: 600; font-size: 12px;">${status}</p>` : ""}
+      <p style="margin: 0; font-size: 12px; color: #6b7280; line-height: 1.3;">
+        <strong>Lower Body Tip:</strong> Include both quad-dominant (squats, lunges) AND hip-dominant (deadlifts, RDLs) exercises for balanced leg strength and injury prevention.
+      </p>
+    </div>
+  `;
+}
+// ===== END PUSH/PULL BALANCE FEATURE =====
 
 // Continue with rest of the code...
 
@@ -3583,6 +3692,16 @@ function updateApp() {
                   isPhaseOpen && exercises.filter((e) => !e.isSelected).length
                     ? `
                     <div>
+                        ${phase === "strength" ? `
+                          <div style="background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin-bottom: 16px; border-radius: 4px;">
+                            <p style="margin: 0 0 8px 0; font-size: 14px; color: #92400e; line-height: 1.4;">
+                              <strong>Same-Day Push/Pull:</strong> In this strength workout, select both PUSH (presses, pushups) and PULL (rows, deadlifts) exercises. Postmenopausal women benefit from balanced training in the same session for optimal recovery and to prevent shoulder/postural imbalances as estrogen declines.
+                            </p>
+                            <p style="margin: 0; font-size: 13px; color: #92400e; line-height: 1.4;">
+                              <strong>Lower Body Balance:</strong> Combine quad-dominant moves (squats, lunges) with hip-dominant moves (deadlifts, RDLs). Example: If doing 2 squats, add a deadlift for complete leg development.
+                            </p>
+                          </div>
+                        ` : ""}
                         <h4>Available Exercises</h4>
                         <div class="exercise-grid">
                             ${exercises
@@ -3608,9 +3727,7 @@ function updateApp() {
                                         <span>${ex.weight}</span>
                                         <span>Rest: ${ex.rest}</span>
                                     </div>
-                                    <p style="margin-top: 8px; font-size: 13px; color: #6b7280; line-height: 1.3;">${
-                                      ex.description
-                                    }</p>
+                                    <p style="margin-top: 8px; font-size: 13px; color: #6b7280; line-height: 1.3;">${ex.description}</p>
                                 </div>
                             `
                               )
@@ -3625,15 +3742,6 @@ function updateApp() {
     `;
     })
     .join("");
-
-  // Initialize push/pull balance system for strength phase
-  setTimeout(() => {
-    if (document.querySelector('[data-phase="strength"]')) {
-      addPushPullGuidance();
-      updatePushPullBalance();
-      setupExerciseEventListeners();
-    }
-  }, 0);
 
   addEventListeners();
   restoreOpenPhases();
