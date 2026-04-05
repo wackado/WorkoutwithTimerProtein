@@ -173,9 +173,9 @@ const weeklyFrameworks = {
   },
   2: {
     monday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -183,36 +183,36 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 25, quick: 15, extended: 35 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 15, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 25, quick: 15, extended: 35 },
-      phases: ["mobility", "cooldown"],
+      type: "SIT Session",
+      duration: { standard: 30, quick: 20, extended: 40 },
+      phases: ["activation", "sit", "cooldown"],
     },
     saturday: {
-      type: "Jump + Resistance",
+      type: "Resistance Training",
       duration: { standard: 45, quick: 35, extended: 50 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     sunday: {
-      type: "SIT Session",
-      duration: { standard: 25, quick: 18, extended: 30 },
-      phases: ["activation", "sit", "cooldown"],
+      type: "Rest or Mobility",
+      duration: { standard: 25, quick: 15, extended: 35 },
+      phases: ["mobility", "cooldown"],
     },
   },
   3: {
     monday: {
-      type: "Jump + Heavy Resistance",
+      type: "Resistance Training",
       duration: { standard: 50, quick: 40, extended: 60 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     tuesday: {
       type: "SIT Session",
@@ -220,29 +220,29 @@ const weeklyFrameworks = {
       phases: ["activation", "sit", "cooldown"],
     },
     wednesday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 30, quick: 20, extended: 40 },
-      phases: ["mobility", "cooldown"],
+      type: "Jump Training",
+      duration: { standard: 20, quick: 15, extended: 25 },
+      phases: ["activation", "jump", "cooldown"],
     },
     thursday: {
-      type: "Jump + Heavy Resistance",
+      type: "Resistance Training",
       duration: { standard: 50, quick: 40, extended: 60 },
-      phases: ["activation", "jump", "strength", "cooldown"],
+      phases: ["activation", "strength", "cooldown"],
     },
     friday: {
-      type: "Rest or Mobility/Core",
-      duration: { standard: 30, quick: 20, extended: 40 },
-      phases: ["mobility", "cooldown"],
-    },
-    saturday: {
-      type: "Power + Integration",
-      duration: { standard: 45, quick: 35, extended: 55 },
-      phases: ["activation", "power", "integration", "cooldown"],
-    },
-    sunday: {
       type: "SIT Session",
       duration: { standard: 30, quick: 20, extended: 35 },
       phases: ["activation", "sit", "cooldown"],
+    },
+    saturday: {
+      type: "Resistance Training",
+      duration: { standard: 50, quick: 40, extended: 60 },
+      phases: ["activation", "strength", "cooldown"],
+    },
+    sunday: {
+      type: "Rest or Mobility",
+      duration: { standard: 30, quick: 20, extended: 40 },
+      phases: ["mobility", "cooldown"],
     },
   },
   4: {
