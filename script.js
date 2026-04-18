@@ -308,7 +308,8 @@ const phaseExplanations = {
   jump: "Jump training provides the high-impact bone loading stimulus necessary to maintain and build bone density - your body needs impact forces 4-5x bodyweight to trigger bone formation. Plyometrics also preserve power, improve balance, and reduce fall risk by training rapid force production and reactive strength.",
   power:
     "Power training preserves fast-twitch muscle fibers that decline rapidly during menopause. These explosive movements improve your ability to react quickly (fall prevention), maintain bone density, and perform daily activities with confidence and strength.",
-  sit: "SIT (Sprint Interval Training) sessions should be SHORT and INTENSE. Mix different exercises to keep it interesting while maintaining maximum effort. Target 80-100% of your maximum heart rate during work intervals!",
+  sit: "SIT (Sprint Interval Training) sessions should be SHORT and INTENSE. Mix different exercises to keep it interesting while maintaining maximum effort during work intervals (80-100% of max heart rate). Between intervals, rest 2-3 minutes until your heart rate drops to 60-70% of max before starting the next round. This recovery is essential for maintaining form quality and preventing injury.",
+  strength: "Build muscle and bone density with progressive overload. Quality over quantity: 3 strict pushups with perfect form provide more stimulus than 10 sloppy ones. When increasing weight, expect fewer reps - this is normal and shows progression. Good form prevents injury and maximizes results. Rest between exercises until your heart rate returns to 60-70% of max (approximately when you can speak normally again).",
 };
 
 const phaseInstructions = {
@@ -713,6 +714,15 @@ const exerciseOptions = {
       rest: "60-90s",
       description:
         "Standard push-up: hands shoulder-width apart, lower body until chest nearly touches floor, push back up. Keep core tight, elbows at 45 degrees. Modify on knees or incline if needed. Builds upper body pushing strength with bodyweight load.",
+    },
+    {
+      name: "Banded Pallof Press",
+      reps: "8-10/side",
+      weight: "resistance band",
+      time: "1 round",
+      rest: "60s",
+      description:
+        "Anchor resistance band at chest height. Stand perpendicular to anchor, band in both hands at chest. Press hands straight forward, resisting rotation. Your core fights to keep torso stable and prevent twisting. Complete reps on one side, then switch. Critical anti-rotation core strength for fall prevention and postural stability.",
     },
   ],
   sit: [
@@ -1439,6 +1449,7 @@ const exerciseMovementType = {
     "Modified Tricep Dips",
     "Explosive Push-Ups",
     "Push-Ups",
+    "Banded Pallof Press",
     // Lower Body - Quad Dominant (knee extension focus)
     "Goblet Squat",
     "Bulgarian Split Squat with Tricep Extension",
@@ -3697,7 +3708,7 @@ function updateApp() {
                             <p style="margin: 0 0 8px 0; font-size: 14px; color: #92400e; line-height: 1.4;">
                               <strong>Same-Day Push/Pull:</strong> In this strength workout, select both PUSH (presses, pushups) and PULL (rows, deadlifts) exercises. Postmenopausal women benefit from balanced training in the same session for optimal recovery and to prevent shoulder/postural imbalances as estrogen declines.
                             </p>
-                            <p style="margin: 0; font-size: 13px; color: #92400e; line-height: 1.4;">
+                            <p style="margin: 0; font-size: 14px; color: #92400e; line-height: 1.4;">
                               <strong>Lower Body Balance:</strong> Combine quad-dominant moves (squats, lunges) with hip-dominant moves (deadlifts, RDLs). Example: If doing 2 squats, add a deadlift for complete leg development.
                             </p>
                           </div>
